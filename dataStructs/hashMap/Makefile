@@ -1,8 +1,8 @@
 CC= gcc
-DB= -ggdb -g -Wall -Wextra -I./include
+DB= -ggdb -g -Wall -Wextra -I./inc
 
 SRC_DIR = src
-INCLUDE_DIR = include
+INCLUDE_DIR = inc
 BUILD_DIR = build
 BIN_DIR = bin
 

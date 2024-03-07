@@ -18,23 +18,25 @@ int main() {
     insert(hashmap, &key1, &data1, INT);
 
     // Retrieving data from the HashMap
-    //int *result = (int *)getData(hashmap, key1);
-    //if (result != NULL) {
-    //    printf("Data associated with key1: %d\n", *result);
-    //} else {
-    //    printf("Key not found.\n");
-    //}
+    int *result = (int *)getData(hashmap, &key1);
+    if (result != NULL) {
+        printf("Data associated with key1: %d\n", *result);
+    } else {
+        puts("Key not found.");
+    }
 
     // Checking if the HashMap is empty
-    //if (isEmpty(hashmap)) {
-    //    printf("HashMap is empty.\n");
-    //} else {
-    //    printf("HashMap is not empty.\n");
-    //}
+    if (isEmpty(hashmap)) {
+        puts("HashMap is empty.");
+    } else {
+        puts("HashMap is not empty.");
+    }
 
     // Clearing the HashMap
-    //clear(hashmap);
-    //free(hashmap);
+    //clear(hashmap); The structs will be stack allocated, but i keep this here as I am a cowardly man
+    free(hashmap);
+    
+    puts("HashMap cleared");
 
     return 0;
 }
